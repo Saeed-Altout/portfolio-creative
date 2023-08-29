@@ -1,0 +1,65 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins" !important;
+}
+
+ul {
+  list-style: none;
+}
+
+.hero {
+  overflow: hidden;
+}
+.hero:after {
+  content: " ";
+  position: absolute;
+  width: 1200px;
+  height: 1200px;
+  border-radius: 100%;
+  top: -20%;
+  right: -20%;
+  z-index: -10;
+  filter: blur(100px);
+  background: linear-gradient(239.24deg, #c5d8ff 22.34%, #fbfcff 83.1%);
+}
+.hero::before {
+  content: " ";
+  position: absolute;
+  width: 1200px;
+  height: 1200px;
+  border-radius: 100%;
+  top: 30%;
+  left: -20%;
+  z-index: -10;
+  filter: blur(100px);
+  background: linear-gradient(239.24deg, #ffc4ee 22.34%, #fbfcff 83.1%);
+}
+
+@media (max-width: 768px) {
+  .hero:after {
+    width: 400px;
+    height: 400px;
+  }
+  .hero::before {
+    width: 400px;
+    height: 400px;
+  }
+}
+.text-gradient {
+  background: linear-gradient(90deg, #ffc4ee 22.34%, #c5d8ff 83.1%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
