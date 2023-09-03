@@ -36,11 +36,11 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative max-w-[350px] mx-auto hidden md:block">
+        <div className="relative hidden mx-auto h-[400px] w-[400px] md:block">
           <Image
             src={hero}
             alt="Hero"
-            className="object-contain w-auto h-auto"
+            className="object-contain w-full h-full"
           />
         </div>
       </Wrapper>
