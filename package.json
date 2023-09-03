@@ -1,14 +1,17 @@
 {
-  "name": "Portfolio Creative",
+  "name": "portfolio-creative",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "homepage":"http://Saeed-Altout.github.io/portfolio-creative",
     "@emailjs/browser": "^3.11.0",
     "@reduxjs/toolkit": "^1.9.5",
     "autoprefixer": "10.4.14",

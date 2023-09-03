@@ -12,8 +12,6 @@ import {
   Skills,
 } from "@/layouts";
 const Home = () => {
-  const { setActiveMenu, setActiveDropDown } = useStateContext();
-
   return (
     <div className="relative overflow-x-hidden dark:bg-black">
       <header className="relative w-full h-screen ">

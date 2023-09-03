@@ -1,5 +1,3 @@
-"use client";
-import { useState } from "react";
 import "./globals.css";
 import { ContextProvider } from "@/contexts/ContextProvider";
 export const metadata = {
@@ -8,11 +6,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const [currentMode] = useState("light");
   return (
     <html lang="en">
       <ContextProvider>
-        <body className={currentMode === "dark" ? "dark" : "light"}>
+        <body className={"light" === "dark" ? "dark" : "light"}>
           {children}
         </body>
       </ContextProvider>

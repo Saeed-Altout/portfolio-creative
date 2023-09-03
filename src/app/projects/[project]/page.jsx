@@ -29,15 +29,18 @@ const ProjectPage = () => {
 
               <div className="w-full p-10">
                 <h1 className="flex items-center justify-start gap-3 text-4xl font-semibold tracking-wide">
-                  {project.title}{" "}
+                  {project.title}
                   <span className="text-3xl text-yellow-300">
-                    {project.showAsTheBest ? <FaStar /> : ""}
+                    {project.showAsTheBest ? <FaStar /> : null}
                   </span>
                 </h1>
 
                 <div className="mt-5 mb-10">
                   {project.moreDataProject.map((item) => (
-                    <div className="flex flex-col items-start justify-start gap-4 text-lg font-normal tracking-wide text-black">
+                    <div
+                      key={item.id}
+                      className="flex flex-col items-start justify-start gap-4 text-lg font-normal tracking-wide text-black"
+                    >
                       <span className="flex items-center justify-start gap-3 text-gray-400">
                         <FaUser /> <p className="text-black">{item.coding}</p>
                       </span>
@@ -50,8 +53,10 @@ const ProjectPage = () => {
                       </span>
                       <span className="flex flex-col items-start justify-start gap-3 text-gray-400">
                         <FaSquare />
-                        {item.tools.map((tool) => (
-                          <p className="text-black ">{...tool}</p>
+                        {item.tools.map((tool, index) => (
+                          <p key={index} className="text-black ">
+                            {...tool}
+                          </p>
                         ))}
                       </span>
                     </div>
@@ -70,8 +75,9 @@ const ProjectPage = () => {
                     Colors
                   </span>
                   <div className="flex flex-wrap items-start justify-start gap-5">
-                    {project.colors.map((color) => (
+                    {project.colors.map((color, index) => (
                       <span
+                        key={index}
                         className="block w-16 h-16"
                         style={{
                           backgroundColor: color,
@@ -101,31 +107,3 @@ const ProjectPage = () => {
 };
 
 export default ProjectPage;
-
-// <div className="p-5 text-left text-black">
-// <h3 className="text-2xl font-medium ">{project.title}</h3>
-// <p className="py-2 text-base font-normal">
-//   {project.description}
-// </p>
-// <div className="flex items-center justify-end w-full">
-//   <Link
-//     href={`/projects/${project.title}`}
-//     className="block mt-5 w-fit"
-//   >
-//     <button className="flex items-center justify-center gap-3 px-4 py-2 text-lg font-medium duration-300 ease-in-out rounded-full">
-//       Details
-//       <span>
-//         <FiArrowUpRight />
-//       </span>
-//     </button>
-//   </Link>
-//   <Link href={project.href} className="block mt-5 w-fit">
-//     <button className="flex items-center justify-center gap-3 px-4 py-2 text-lg font-medium duration-300 ease-in-out rounded-full">
-//       View
-//       <span>
-//         <FaGithub />
-//       </span>
-//     </button>
-//   </Link>
-// </div>
-// </div>
