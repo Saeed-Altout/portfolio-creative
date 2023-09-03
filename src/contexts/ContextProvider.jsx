@@ -19,7 +19,6 @@ export const ContextProvider = ({ children }) => {
     subject: "",
     message: "",
   });
-  console.log(form);
   const handleChange = (e) => {
     // const { target } = e;
     // const { name, value } = target;
