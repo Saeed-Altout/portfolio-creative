@@ -1,24 +1,21 @@
 "use client";
-import { useStateContext } from "@/contexts/ContextProvider";
 import Image from "next/image";
 import { FaClock, FaPenSquare, FaSquare, FaStar, FaUser } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
-import { projects } from "@/constants";
+import { dataProjects } from "@/constants";
 import { Button, Navbar } from "@/components";
+import { useStateContext } from "@/contexts/ContextProvider";
+import Link from "next/link";
 
 const ProjectPage = () => {
   const { projetActive, setProjetActive } = useStateContext();
-
   return (
     <div className="w-full overflow-x-hidden">
       <Navbar />
-      {projects.map(
-        (project) =>
+      {dataProjects.map(
+        (project, key) =>
           project.title === projetActive && (
-            <div
-              key={project.id}
-              className="flex flex-col w-full h-full gap-10 py-20"
-            >
+            <div key={key} className="flex flex-col w-full h-full gap-10 py-20">
               <div className="w-full h-full">
                 <Image
                   src={project.img}
@@ -31,7 +28,7 @@ const ProjectPage = () => {
                 <h1 className="flex items-center justify-start gap-3 text-4xl font-semibold tracking-wide">
                   {project.title}
                   <span className="text-3xl text-yellow-300">
-                    {project.showAsTheBest ? <FaStar /> : null}
+                    {project.favorite ? <FaStar /> : null}
                   </span>
                 </h1>
 
@@ -59,6 +56,13 @@ const ProjectPage = () => {
                           </p>
                         ))}
                       </span>
+                      <div className="flex flex-col gap-3">
+                        {item.links.map((link, key) => (
+                          <Link href={link} key={key} className="text-base">
+                            {link}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   ))}
                 </div>

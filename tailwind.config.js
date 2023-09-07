@@ -12,7 +12,8 @@ module.exports = {
       colors: {
         primary: "#4e98e5",
         graySd: "#404152",
-        darkSd: "#060A11",
+        darker: "#121212",
+        dark: "#1D1D1F",
         darkestSd: "#070c13",
         blueLightSd: "#e9ecef",
         whiteLightSd: "#dfdfdf",

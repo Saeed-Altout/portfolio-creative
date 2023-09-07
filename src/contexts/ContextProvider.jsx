@@ -6,64 +6,18 @@ const StateContext = createContext();
 
 export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(false);
+  const [settings, setSettings] = useState(false);
+  const [mode, setMode] = useState("light");
+  const [currentTheme, setCurrentTheme] = useState("#d083ff");
   const [activeDropDown, setActiveDropDown] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const formRef = useRef();
-  const [projetActive, setProjetActive] = useState("null");
 
-  const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const handleChange = (e) => {
-    // const { target } = e;
-    // const { name, value } = target;
-    // setForm({
-    //   ...form,
-    //   [name]: value,
-    // });
+  const [projetActive, setProjetActive] = useState("");
+  const [category, setCategory] = useState("all");
+  const [likes, setLikes] = useState(0);
+  const handleLikes = () => {
+    setLikes(likes + 1);
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // setLoading(true);
-    // emailjs
-    //   .send(
-    //     import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-    //     import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-    //     {
-    //       from_name: form.name,
-    //       to_name: "Saeed Altout",
-    //       from_email: form.email,
-    //       to_email: "saeedaltoutsy@gmail.com",
-    //       message: form.message,
-    //     },
-    //     import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-    //   )
-    //   .then(
-    //     () => {
-    //       setLoading(false);
-    //       alert("Thank you. I will get back to you as soon as possible.");
-    //       setForm({
-    //         firstName: "",
-    //         lastName: "",
-    //         email: "",
-    //         subject: "",
-    //         message: "",
-    //       });
-    //     },
-    //     (error) => {
-    //       setLoading(false);
-    //       console.error(error);
-    //       alert("Opss, something went wrong. Please try again.");
-    //     }
-    //   );
-  };
-
   const handleScroll = () => {
     const scrollTop = window.scrollY;
     if (scrollTop > 100) {
@@ -86,16 +40,21 @@ export const ContextProvider = ({ children }) => {
         activeMenu,
         setActiveMenu,
         scrolled,
-        form,
-        setForm,
-        formRef,
-        handleSubmit,
-        handleChange,
-        loading,
-        setLoading,
+
         year,
         projetActive,
         setProjetActive,
+        currentTheme,
+        setCurrentTheme,
+        settings,
+        setSettings,
+        mode,
+        setMode,
+        category,
+        setCategory,
+        likes,
+        setLikes,
+        handleLikes,
       }}
     >
       {children}

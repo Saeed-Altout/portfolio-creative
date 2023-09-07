@@ -1,49 +1,42 @@
-"use client";
-import { Button, TitleSection, Wrapper } from "@/components";
-import { services } from "@/constants";
 import Image from "next/image";
-import { FiArrowUpRight } from "react-icons/fi";
-
+import { services } from "@/constants";
+import { flex, tag, text } from "@/app/style";
+import { Container, Grid, TitleSection } from "@/components";
 const Services = () => {
   return (
-    <section className="relative py-40" id="services">
-      <Wrapper styles="flex flex-col justify-center items-center gap-20">
+    <section className={tag.section} id="services">
+      <Container>
         <TitleSection
-          styles="text-center"
           title="Provide Services"
           subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod."
         />
-        <div className="flex flex-wrap items-center justify-center gap-10">
-          {services.map((service) => (
+
+        <Grid>
+          {services.map((service, key) => (
             <div
-              key={service.id}
-              className="max-w-sm p-10 text-center duration-300 ease-in-out bg-white border-2 rounded-lg border-gray-50 lg:max-w-sm hover:border-gray-100 "
+              key={key}
+              className={`${flex.center} flex-col gap-2 sm:max-w-md p-10 text-center duration-300 ease-in-out bg-white dark:bg-dark border-2 rounded-lg border-gray-50 hover:border-gray-100 dark:border-darker dark:hover:border-dark`}
             >
-              <div className="w-20 h-20 mx-auto my-5 overflow-hidden rounded-2xl">
+              <div className="mb-5 h-18 w-18">
                 <Image
                   src={service.icon}
                   alt="Icon Services"
-                  className="object-cover w-auto h-auto"
+                  className="object-contain w-full h-full "
                 />
               </div>
-              <h3 className="text-3xl font-semibold text-black">
+              <h2
+                className={text.h2}
+                style={{
+                  color: service.color,
+                }}
+              >
                 {service.title}
-              </h3>
-              <p className="py-5 text-base font-normal leading-8 ">
-                {service.descr}
-              </p>
-
-              <Button
-                href="contact"
-                text="Contact"
-                icon={<FiArrowUpRight />}
-                color={service.color}
-                styles={`mt-5 mx-auto text-white`}
-              />
+              </h2>
+              <p className={text.p}>{service.descr}</p>
             </div>
           ))}
-        </div>
-      </Wrapper>
+        </Grid>
+      </Container>
     </section>
   );
 };

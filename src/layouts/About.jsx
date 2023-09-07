@@ -1,12 +1,12 @@
 import { profile } from "@/assets/images";
-import { Wrapper } from "@/components";
+import { Container, Wrapper } from "@/components";
 import { dataMe, offers } from "@/constants";
 import Image from "next/image";
 
 const About = () => {
   return (
     <section className="relative py-40">
-      <Wrapper styles="flex flex-col md:flex-row justify-center items-start gap-10">
+      <Container>
         <div className="flex flex-col w-full max-w-4xl gap-12 duration-300 ease-in-out">
           <div className="flex flex-col gap-3">
             <div className="flex flex-col items-center justify-start gap-4 md:items-end md:flex-row">
@@ -77,7 +77,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </Wrapper>
+      </Container>
     </section>
   );
 };

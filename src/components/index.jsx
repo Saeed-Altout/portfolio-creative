@@ -1,14 +1,16 @@
-export { default as Navbar } from "./Navbar";
-export { default as Button } from "./Button";
-export { default as Logo } from "./Logo";
+export { default as Logo } from "./navbar/Logo";
+export { default as Toggle } from "./navbar/Toggle";
+export { default as Menu } from "./navbar/Menu";
+
+export { default as Container } from "./common/Container";
+
+export { default as Navbar } from "./common/Navbar";
+export { default as Button } from "./buttons/Button";
 export { default as ProjectCard } from "./ProjectCard";
 export { default as ServiceCard } from "./ServiceCard";
-export { default as Toggle } from "./Toggle";
-export { default as MenuDesktop } from "./MenuDesktop";
-export { default as ButtonScroll } from "./ButtonScroll";
-export { default as MenuMobile } from "./MenuMobile";
+export { default as ButtonScroll } from "./buttons/ButtonScroll";
 export { default as TitleWebsite } from "./TitleWebsite";
 export { default as TitleSection } from "./TitleSection";
-export { default as ButtonSettings } from "./ButtonSettings";
-export { default as AreaProjects } from "./AreaProjects";
-export { default as Wrapper } from "./Wrapper";
+export { default as ButtonSettings } from "./buttons/ButtonSettings";
+
+export { default as Grid } from "./Grid";

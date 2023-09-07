@@ -1,23 +1,26 @@
-import { Wrapper } from "@/components";
+import { flex, tag, text } from "@/app/style";
+import { Container } from "@/components";
 import { states } from "@/constants";
 const ProofState = () => {
   return (
-    <section className="relative py-10">
-      <Wrapper styles="flex flex-wrap justify-center items-center gap-20">
-        {states.map((state) => (
-          <div key={state.id} className="flex items-center justify-start gap-2">
-            <span
-              className="text-4xl font-bold"
-              style={{
-                color: state.color,
-              }}
-            >
-              {state.state}
-            </span>
-            <span className="text-base font-semibold">{state.name}</span>
-          </div>
-        ))}
-      </Wrapper>
+    <section className={tag.section}>
+      <Container>
+        <div className={`${flex.center} flex-col gap-10 md:flex-row`}>
+          {states.map((state) => (
+            <div key={state.id} className={`${flex.center} gap-2`}>
+              <h1
+                className={text.h1}
+                style={{
+                  color: state.color,
+                }}
+              >
+                {state.state}
+              </h1>
+              <h4 className={text.h4}>{state.name}</h4>
+            </div>
+          ))}
+        </div>
+      </Container>
     </section>
   );
 };

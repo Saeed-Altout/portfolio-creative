@@ -1,3 +1,17 @@
+import react from "../assets/images/skills/react.png";
+import api from "../assets/images/skills/api.png";
+import vercel from "../assets/images/skills/vercel.svg";
+import css from "../assets/images/skills/css.png";
+import figma from "../assets/images/skills/figma.png";
+import tailwind from "../assets/images/skills/tailwind.png";
+import git from "../assets/images/skills/git.png";
+import html from "../assets/images/skills/html.png";
+import javascript from "../assets/images/skills/javascript.png";
+import node from "../assets/images/skills/node.png";
+import python from "../assets/images/skills/python.png";
+import redux from "../assets/images/skills/redux.png";
+import sass from "../assets/images/skills/sass.png";
+import typescript from "../assets/images/skills/typescript.png";
 import {
   FaCity,
   FaPhone,
@@ -16,6 +30,11 @@ import {
   FaLine,
   FaGenderless,
   FaUser,
+  FaHome,
+  FaTools,
+  FaLinkedinIn,
+  FaLinkedin,
+  FaTelegram,
 } from "react-icons/fa";
 import { FaFolder, FaHeadphones, FaPlus, FaUsers } from "react-icons/fa";
 import {
@@ -31,109 +50,118 @@ import service2 from "../assets/images/service/services-icon-2.svg";
 import service3 from "../assets/images/service/services-icon-3.svg";
 import service4 from "../assets/images/service/services-icon-4.svg";
 import service5 from "../assets/images/service/services-icon-5.svg";
+import service6 from "../assets/images/service/services-icon-6.svg";
 import service7 from "../assets/images/service/services-icon-7.svg";
+import service8 from "../assets/images/service/services-icon-8.svg";
 import { client01, client02, client03 } from "@/assets/images/clients";
-import { FiFileText } from "react-icons/fi";
+import { FiFileText, FiSettings } from "react-icons/fi";
 
 export const navLinks = [
   {
-    id: 0,
     name: "home",
+    href: "/",
+    icon: <FaHome />,
+  },
+  {
+    name: "about",
+    href: "/about",
+    icon: <FaUser />,
+  },
+  {
+    name: "services",
+    href: "/#services",
+    icon: <FaHeadphones />,
+  },
+  {
+    name: "projects",
+    href: "/#projects",
+    icon: <FaFolder />,
+  },
+  {
+    name: "skills",
+    href: "/#skills",
+    icon: <FaTools />,
+  },
+  {
+    name: "testmoinals",
+    href: "/#testmoinals",
+    icon: <FaUsers />,
   },
 
   {
-    id: 1,
-    name: "services",
-  },
-  {
-    id: 2,
-    name: "projects",
-  },
-  {
-    id: 3,
-    name: "skills",
-  },
-  {
-    id: 4,
-    name: "testmoinals",
-  },
-  {
-    id: 5,
-    name: "pages",
-    pageLinks: [
-      {
-        id: 0,
-        title: "about",
-        href: "about",
-      },
-      {
-        id: 1,
-        title: "developer",
-        href: "developer",
-      },
-      {
-        id: 2,
-        title: "graphic designer",
-        href: "graphic-designer",
-      },
-    ],
-  },
-  {
-    id: 6,
     name: "contact",
+    href: "/#contact",
+    icon: <FaEnvelope />,
+  },
+  {
+    name: "github",
+    href: "https://github.com/Saeed-Altout",
+    icon: <FaGithub />,
   },
 ];
 
 export const services = [
   {
-    id: 0,
     icon: service1,
     color: "#ffb27a",
     title: "UX, UI Design",
-    descr: `Strategy formulation is built on "the match between all organisation resources and skills based program.`,
+    descr: `Strategy formulation is built. consectetur adipiscing elit`,
   },
   {
-    id: 1,
     icon: service2,
     color: "#8bc7ff",
     title: "Web Design",
-    descr: `Strategy formulation is built on "the match between all organisation resources and skills based program.`,
+    descr: `Strategy formulation is built. consectetur adipiscing elit`,
   },
   {
-    id: 2,
     icon: service3,
     color: "#d083ff",
-
     title: "UX Research",
-    descr: `Strategy formulation is built on "the match between all organisation resources and skills based program.`,
+    descr: `Strategy formulation is built. consectetur adipiscing elit`,
   },
+
   {
-    id: 3,
     icon: service4,
     color: "#ffb27a",
-
     title: "Security",
-    descr: `Strategy formulation is built on "the match between all organisation resources and skills based program.`,
+    descr: `Strategy formulation is built. consectetur adipiscing elit`,
   },
   {
-    id: 4,
     icon: service5,
     color: "#8bc7ff",
-
     title: "Mobile Modern",
-    descr: `Strategy formulation is built on "the match between all organisation resources and skills based program.`,
+    descr: `Strategy formulation is built. consectetur adipiscing elit`,
+  },
+  {
+    icon: service6,
+    color: "#ffb27a",
+    title: "Team Friendly",
+    descr: `Strategy formulation is built. consectetur adipiscing elit`,
+  },
+  {
+    icon: service7,
+    color: "#d083ff",
+    title: "Code Clean",
+    descr: `Strategy formulation is built. consectetur adipiscing elit`,
+  },
+  {
+    icon: service8,
+    color: "#4a69d8",
+    title: "Fast Responsev",
+    descr: `Strategy formulation is built. consectetur adipiscing elit`,
   },
 ];
-export const projects = [
+
+export const dataProjects = [
   {
-    id: 0,
     img: hoobank,
-    title: "Hoobank",
-    domain: "http://",
-    href: "http://",
+    title: "hoobank",
+    domain: "https://github.com/Saeed-Altout/hoobank",
+    href: "https://hoobank-sd.vercel.app",
     description:
-      "The Next Generation Payment Method. Our team of experts uses a methodology to identify the credit cards most likely to fit your needs. We examine annual percentage rates, annual fees.",
-    colors: ["#000510", "#3dc3d5", "#93b4bc", "#aaf0f1"],
+      "Hoobank is a modern website for a new generation of payment and transfer methods",
+    category: "web",
+    price: "free",
     moreDataProject: [
       {
         id: 0,
@@ -144,119 +172,117 @@ export const projects = [
           "Paypal",
           "billing & invoicing",
         ],
-        tools: ["NextJs", "Talwind Css", "Framer Motion", "Management"],
+        tools: ["NextJs", "Talwind Css", "Framer Motion"],
         hours: 5,
         design: "Js Mastry",
         coding: "Saeed Altout",
+        links: [
+          "https://github.com/Saeed-Altout/hoobank",
+          "https://hoobank-sd.vercel.app",
+        ],
       },
     ],
 
-    showAsTheBest: true,
+    colors: ["#000510", "#3dc3d5", "#93b4bc", "#aaf0f1"],
+    favorite: true,
   },
   {
-    id: 1,
     img: seo,
-    title: "Seo",
-    href: "http://",
-    description: "Discover More on Latest SEO Trends",
-    showAsTheBest: true,
+    title: "seo",
+    domain: "https://github.com/Saeed-Altout/hoobank",
+    href: "https://hoobank-sd.vercel.app",
+    description:
+      "Hoobank is a modern website for a new generation of payment and transfer methods",
+    category: "web",
+    price: "free",
     moreDataProject: [
       {
         id: 0,
-        tags: ["Market"],
-        tools: ["ReactJs", "NextJs", "Talwind Css", "Framer Motion"],
-        hours: 3.5,
+        tags: [
+          "Market",
+          "Business",
+          "Balance Transfer",
+          "Paypal",
+          "billing & invoicing",
+        ],
+        tools: ["NextJs", "Talwind Css", "Framer Motion"],
+        hours: 5,
         design: "Js Mastry",
         coding: "Saeed Altout",
+        links: [
+          "https://github.com/Saeed-Altout/hoobank",
+          "https://hoobank-sd.vercel.app",
+        ],
       },
     ],
-    colors: ["#ffb27a", "#8bc7ff", "#d083ff", "#95ff83"],
+
+    colors: ["#000510", "#3dc3d5", "#93b4bc", "#aaf0f1"],
+    favorite: true,
   },
   {
-    id: 2,
-    img: portfolio_3D,
-    title: "portfolio_3D",
-    href: "http://",
-    description: "Precise Data Analysis & Prediction",
-    showAsTheBest: false,
-    moreDataProject: [
-      {
-        id: 0,
-        tags: ["Market", "Design"],
-        tools: ["ReactJs", "NextJs", "Talwind Css", "Framer Motion"],
-        hours: 3.5,
-        design: "Js Mastry",
-        coding: "Saeed Altout",
-      },
-    ],
-    colors: ["#ffb27a", "#8bc7ff", "#d083ff", "#95ff83"],
-  },
-  {
-    id: 3,
-    img: portfolio,
-    title: "portfolio",
-    href: "http://",
-    description: "Precise Data Analysis & Prediction",
-    showAsTheBest: false,
-    moreDataProject: [
-      {
-        id: 0,
-        tags: ["Market", "Design"],
-        tools: ["ReactJs", "NextJs", "Talwind Css", "Framer Motion"],
-        hours: 3.5,
-        design: "Js Mastry",
-        coding: "Saeed Altout",
-      },
-    ],
-    colors: ["#ffb27a", "#8bc7ff", "#d083ff", "#95ff83"],
-  },
-  {
-    id: 2,
     img: devbook,
     title: "devbook",
-    href: "http://",
-    description: "Precise Data Analysis & Prediction",
-    showAsTheBest: true,
+    domain: "https://github.com/Saeed-Altout/hoobank",
+    href: "https://hoobank-sd.vercel.app",
+    description:
+      "Hoobank is a modern website for a new generation of payment and transfer methods",
+    category: "web",
+    price: "free",
     moreDataProject: [
       {
         id: 0,
-        tags: ["Market", "Design"],
-        tools: ["ReactJs", "NextJs", "Talwind Css", "Framer Motion"],
-        hours: 3.5,
+        tags: [
+          "Market",
+          "Business",
+          "Balance Transfer",
+          "Paypal",
+          "billing & invoicing",
+        ],
+        tools: ["NextJs", "Talwind Css", "Framer Motion"],
+        hours: 5,
         design: "Js Mastry",
         coding: "Saeed Altout",
+        links: [
+          "https://github.com/Saeed-Altout/hoobank",
+          "https://hoobank-sd.vercel.app",
+        ],
       },
     ],
-    colors: ["#ffb27a", "#8bc7ff", "#d083ff", "#95ff83"],
+
+    colors: ["#000510", "#3dc3d5", "#93b4bc", "#aaf0f1"],
+    favorite: true,
   },
 ];
-const countProjects = projects.length;
+const countProjects = dataProjects.length;
+const countServices = services.length;
+const experiences = new Date().getFullYear() - 2019;
+const clientsHappy = 0;
 export const states = [
   {
     id: 0,
     name: "Happy Clients",
-    state: "+24",
+    state: `${clientsHappy > 1 ? `+${clientsHappy - 1}` : `${clientsHappy}_0`}`,
     color: "#ffb27a",
     icon: <FaUsers />,
   },
   {
     id: 1,
     name: "Projects Complated",
-    state: `+${countProjects}`,
+    state: `${countProjects > 1 ? `+${countProjects - 1}` : countProjects}`,
     color: "#8bc7ff",
     icon: <FaFolder />,
   },
   {
     id: 2,
     name: "Services",
-    state: "+10",
+    state: `${countServices > 1 ? `+${countServices - 1}` : countServices}`,
     color: "#d083ff",
     icon: <FaHeadphones />,
   },
   {
     id: 3,
     name: "Years Experience",
-    state: "+5",
+    state: `${experiences > 1 ? `+${experiences - 1}` : experiences}`,
     color: "#95ff83",
     icon: <FaPlus />,
   },
@@ -298,48 +324,69 @@ export const clientsComment = [
 export const offers = [
   {
     id: 0,
+    icon: react,
     title: "ReactJs",
     percentg: "95%",
   },
   {
     id: 1,
+    icon: react,
     title: "NextJs",
     percentg: "80%",
   },
   {
     id: 2,
+    icon: tailwind,
     title: "Talwind Css",
     percentg: "90%",
   },
   {
     id: 3,
+    icon: tailwind,
     title: "Framer Motion",
     percentg: "50%",
   },
   {
     id: 4,
+    icon: api,
     title: "Api",
     percentg: "40%",
   },
   {
     id: 5,
+    icon: redux,
     title: "Reducx",
     percentg: "70%",
   },
   {
     id: 6,
-    title: "UX & UI ",
+    icon: figma,
+    title: "Xd",
     percentg: "60%",
   },
   {
     id: 7,
+    icon: figma,
     title: "Figma",
     percentg: "90%",
   },
   {
     id: 8,
+    icon: react,
     title: "React Native",
     percentg: "30%",
+  },
+  {
+    id: 9,
+    icon: html,
+    title: "Html",
+    percentg: "100%",
+  },
+  {
+    id: 10,
+    icon: css,
+    title: "Css",
+    percentg: "90%",
   },
 ];
 
@@ -375,11 +422,11 @@ export const footerLinks = [
     title: "Useful Links",
     links: [
       {
-        name: "Content",
+        name: "Freepick",
         link: "https://www.hoobank.com/content/",
       },
       {
-        name: "How it Works",
+        name: "Flat icons",
         link: "https://www.hoobank.com/how-it-works/",
       },
       {
@@ -438,24 +485,24 @@ export const footerLinks = [
 
 export const socialMedia = [
   {
-    id: "social-media-1",
     icon: <FaInstagram />,
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/saeedaltoutpro",
   },
   {
-    id: "social-media-2",
     icon: <FaFacebook />,
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/saeed.altout.587?mibextid=ZbWKwL",
   },
   {
-    id: "social-media-3",
     icon: <FaGithub />,
-    link: "https://www.twitter.com/",
+    link: "https://github.com/Saeed-Altout",
   },
   {
-    id: "social-media-4",
-    icon: <FaWhatsapp />,
-    link: "https://www.linkedin.com/",
+    icon: <FaLinkedin />,
+    link: "https://www.linkedin.com/in/saeed-altout-11596528a?trk=contact-info",
+  },
+  {
+    icon: <FaTelegram />,
+    link: "https://t.me/saeedaltoutpro",
   },
 ];
 
@@ -532,4 +579,13 @@ export const dataMe = [
     title: "Behance",
     text: "---",
   },
+];
+
+export const colorsTheme = [
+  "#ccc",
+  "#ffb27a",
+  "#8bc7ff",
+  "#d083ff",
+  "#95ff83",
+  "#4a69d8",
 ];
