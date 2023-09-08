@@ -1,5 +1,5 @@
 "use client";
-import { ButtonSettings, Navbar } from "@/components";
+import { Settings, Navbar } from "@/components";
 import {
   Contact,
   Footer,
@@ -12,20 +12,33 @@ import {
 } from "@/layouts";
 import { useStateContext } from "@/contexts/ContextProvider";
 const Home = () => {
-  const { mode } = useStateContext();
+  const { mode, setActiveMenu, setSettings, settings, activeMenu } =
+    useStateContext();
   return (
     <div
       className={`${
         mode == "dark" ? "dark" : "light"
       } relative overflow-x-hidden w-full`}
     >
-      <ButtonSettings />
-      <div className="bg-white dark:bg-darker">
-        <header className="h-screen">
+      <Settings />
+      <div className="relative bg-white dark:bg-darker">
+        <header>
           <Navbar />
-          <Hero />
         </header>
-        <main>
+        {settings && (
+          <div
+            className="absolute top-0 left-0 w-full h-full bg-[#0009] z-[500]"
+            onClick={() => {
+              setSettings(false);
+            }}
+          />
+        )}
+        <main
+          onClick={() => {
+            setActiveMenu(false);
+          }}
+        >
+          <Hero />
           <Services />
           <Projects />
           <Skills />

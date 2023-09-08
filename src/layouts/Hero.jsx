@@ -4,7 +4,7 @@ import { useStateContext } from "@/contexts/ContextProvider";
 const Hero = () => {
   const { currentTheme } = useStateContext();
   return (
-    <section className={`${tag.section}`}>
+    <section className={`${tag.section} h-screen`}>
       <Container
         styles={`${flex.center} h-full max-w-5xl mx-auto flex-col gap-5`}
       >

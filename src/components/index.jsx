@@ -11,6 +11,6 @@ export { default as ServiceCard } from "./ServiceCard";
 export { default as ButtonScroll } from "./buttons/ButtonScroll";
 export { default as TitleWebsite } from "./TitleWebsite";
 export { default as TitleSection } from "./TitleSection";
-export { default as ButtonSettings } from "./buttons/ButtonSettings";
+export { default as Settings } from "./common/Settings";
 
 export { default as Grid } from "./Grid";

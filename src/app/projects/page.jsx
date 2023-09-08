@@ -1,5 +1,12 @@
 "use client";
-import { Button, Container, Navbar, TitleSection, Grid } from "@/components";
+import {
+  Button,
+  Container,
+  Navbar,
+  TitleSection,
+  Grid,
+  Settings,
+} from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -8,12 +15,34 @@ import { FaEye, FaGithub, FaHeart } from "react-icons/fa";
 import { dataProjects } from "@/constants";
 import { useStateContext } from "@/contexts/ContextProvider";
 const ProjectPage = () => {
-  const { currentTheme, setProjetActive, likes, handleLikes } =
-    useStateContext();
+  const {
+    currentTheme,
+    setProjetActive,
+    likes,
+    handleLikes,
+    setActiveMenu,
+    setSettings,
+    settings,
+    activeMenu,
+  } = useStateContext();
   return (
     <>
       <Navbar />
-      <section className={tag.section}>
+      {settings && (
+        <div
+          className="absolute top-0 left-0 w-full h-full bg-[#0009] z-[500]"
+          onClick={() => {
+            setSettings(false);
+          }}
+        />
+      )}
+      <section
+        className={tag.section}
+        onClick={() => {
+          setActiveMenu(false);
+        }}
+      >
+        <Settings />
         <Container>
           <TitleSection
             styles="text-left w-full"

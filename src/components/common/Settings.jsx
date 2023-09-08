@@ -2,7 +2,7 @@ import { text } from "@/app/style";
 import { colorsTheme } from "@/constants";
 import { useStateContext } from "@/contexts/ContextProvider";
 import { FaMoon, FaSun } from "react-icons/fa";
-const ButtonSettings = () => {
+const Settings = () => {
   const { settings, setSettings, setCurrentTheme, setMode } = useStateContext();
   return (
     <>
@@ -10,8 +10,9 @@ const ButtonSettings = () => {
         <div className="fixed w-80 px-10 pt-5 right-0 top-[80px] h-screen bg-white dark:bg-dark shadow-xl z-[2000] duration-300 ease-in-out">
           <p className={`${text.h5} py-4`}>Theme:</p>
           <div className="flex flex-wrap gap-5">
-            {colorsTheme.map((color) => (
+            {colorsTheme.map((color, key) => (
               <div
+                key={key}
                 className="w-8 h-8 rounded-lg cursor-pointer"
                 style={{
                   backgroundColor: color,
@@ -44,4 +45,4 @@ const ButtonSettings = () => {
   );
 };
 
-export default ButtonSettings;
+export default Settings;

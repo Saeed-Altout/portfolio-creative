@@ -508,73 +508,61 @@ export const socialMedia = [
 
 export const dataMe = [
   {
-    id: 0,
     icon: <FaUser />,
     title: "Position",
-    text: "Front-End Developer & Mobile Developer",
+    text: "Frontend & Mobile Developer",
   },
   {
-    id: 1,
     icon: <FaCalendar />,
     title: "Age",
     text: "23",
   },
   {
-    id: 2,
     icon: <FaLocationArrow />,
     title: "Location",
     text: "Damascus, Syria",
   },
   {
-    id: 3,
     icon: <FaUniversity />,
     title: "University",
     text: "Damascus University",
   },
   {
-    id: 4,
     icon: <FaHeart />,
     title: "Status",
     text: "Single",
   },
   {
-    id: 5,
     icon: <FaFacebook />,
     title: "Facebook",
     text: "Saeed Al-tout",
   },
   {
-    id: 6,
     icon: <FaInstagram />,
     title: "Instagram",
     text: "saeedaltoutsy",
   },
   {
-    id: 7,
     icon: <FaWhatsapp />,
     title: "Whatsapp",
     text: "+96340043810",
   },
   {
-    id: 8,
     icon: <FaEnvelope />,
     title: "E-mail",
     text: "saeedaltoutpro@gmail.com",
   },
   {
-    id: 9,
     icon: <FaGithub />,
     title: "Github",
-    text: "---",
+    text: "https://github.com/Saeed-Altout",
   },
   {
-    id: 10,
     icon: <FaDribbble />,
     title: "Dribbble",
     text: "---",
   },
   {
-    id: 11,
     icon: <FaBehance />,
     title: "Behance",
     text: "---",
