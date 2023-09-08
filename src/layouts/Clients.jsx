@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Clients = () => {
   return (
-    <section className={tag.section} id="testmoinals">
+    <section className={tag.section} id="clients">
       <Container>
         <TitleSection
           title="Happy Clients"

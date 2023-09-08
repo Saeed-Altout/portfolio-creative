@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { variantMenuMobile } from "@/utils/motion";
 import { navLinks } from "@/constants";
-import { tag } from "@/app/style";
+import { flex, tag } from "@/app/style";
 
 import { useStateContext } from "@/contexts/ContextProvider";
 import { FiSettings } from "react-icons/fi";
@@ -30,13 +30,13 @@ const Menu = ({ isMobile }) => {
           }}
         >
           <Link href={link.href} className={tag.a}>
-            {link.icon}
+            {link.name}
           </Link>
         </li>
       ))}
       <button
         type="button"
-        className={`${tag.a} animate-spin`}
+        className={`${tag.a} text-xl`}
         onClick={() => {
           setActiveMenu(false);
           setSettings((prev) => !prev);

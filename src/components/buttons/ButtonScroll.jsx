@@ -1,12 +1,12 @@
-import { flex } from "@/app/styles";
+import { flex } from "@/app/style";
 import { motion } from "framer-motion";
 import Link from "next/link";
 const ButtonScroll = ({ href }) => {
   return (
-    <div className={`absolute ${flex.centerCenter} w-full bottom-10`}>
+    <div className={`absolute ${flex.center} w-full bottom-10`}>
       <Link href={href}>
         <div
-          className={`${flex.startCenter} h-16 p-2 border-2 w-10 rounded-full border-darker dark:border-white`}
+          className={`${flex.center} h-20 p-2 border-2 w-10 rounded-full border-darker dark:border-white`}
         >
           <motion.div
             animate={{

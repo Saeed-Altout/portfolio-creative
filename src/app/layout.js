@@ -1,7 +1,9 @@
 import "./globals.css";
+
 import { ContextProvider } from "@/contexts/ContextProvider";
+
 export const metadata = {
-  title: "Saeed Altout",
+  title: "Saeed Altout | Portfolio",
   description: "My Portfolio To Show My Works",
 };
 

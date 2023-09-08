@@ -83,8 +83,8 @@ export const navLinks = [
     icon: <FaTools />,
   },
   {
-    name: "testmoinals",
-    href: "/#testmoinals",
+    name: "clients",
+    href: "/#clients",
     icon: <FaUsers />,
   },
 
@@ -92,11 +92,6 @@ export const navLinks = [
     name: "contact",
     href: "/#contact",
     icon: <FaEnvelope />,
-  },
-  {
-    name: "github",
-    href: "https://github.com/Saeed-Altout",
-    icon: <FaGithub />,
   },
 ];
 
@@ -158,105 +153,192 @@ export const dataProjects = [
     title: "hoobank",
     domain: "https://github.com/Saeed-Altout/hoobank",
     href: "https://hoobank-sd.vercel.app",
-    description:
-      "Hoobank is a modern website for a new generation of payment and transfer methods",
-    category: "web",
+    shortDesc:
+      "Cryptocurrencies are an innovative system that changes the way we handle",
+    description: [
+      `
+      Cryptocurrencies are an innovative system that changes the way we handle financial transactions, providing new levels of transparency and security.
+      On the web, websites can provide instant updates and live information about these cryptocurrencies, making them vital platforms for price tracking and market trades.`,
+      `Cryptocurrencies and the web have become inextricably linked to each other, with each fueling the development and progress of the other.`,
+      `
+      #HooBank is a modern website for a new generation of payment and transfer methods that relies on the best technologies and tools up to the present time in building and designing websites.`,
+    ],
     price: "free",
+    category: "web",
+    colors: ["#000510", "#3dc3d5", "#93b4bc", "#aaf0f1"],
+    favorite: true,
+
     moreDataProject: [
       {
-        id: 0,
-        tags: [
-          "Market",
-          "Business",
-          "Balance Transfer",
-          "Paypal",
-          "billing & invoicing",
-        ],
-        tools: ["NextJs", "Talwind Css", "Framer Motion"],
-        hours: 5,
-        design: "Js Mastry",
         coding: "Saeed Altout",
+        design: "Js Mastry",
+        hours: "5h",
+        tools: ["NextJs", "Talwind Css", "Framer Motion"],
         links: [
           "https://github.com/Saeed-Altout/hoobank",
           "https://hoobank-sd.vercel.app",
         ],
       },
     ],
-
-    colors: ["#000510", "#3dc3d5", "#93b4bc", "#aaf0f1"],
-    favorite: true,
-  },
-  {
-    img: seo,
-    title: "seo",
-    domain: "https://github.com/Saeed-Altout/hoobank",
-    href: "https://hoobank-sd.vercel.app",
-    description:
-      "Hoobank is a modern website for a new generation of payment and transfer methods",
-    category: "web",
-    price: "free",
-    moreDataProject: [
-      {
-        id: 0,
-        tags: [
-          "Market",
-          "Business",
-          "Balance Transfer",
-          "Paypal",
-          "billing & invoicing",
-        ],
-        tools: ["NextJs", "Talwind Css", "Framer Motion"],
-        hours: 5,
-        design: "Js Mastry",
-        coding: "Saeed Altout",
-        links: [
-          "https://github.com/Saeed-Altout/hoobank",
-          "https://hoobank-sd.vercel.app",
-        ],
-      },
-    ],
-
-    colors: ["#000510", "#3dc3d5", "#93b4bc", "#aaf0f1"],
-    favorite: true,
   },
   {
     img: devbook,
     title: "devbook",
-    domain: "https://github.com/Saeed-Altout/hoobank",
-    href: "https://hoobank-sd.vercel.app",
-    description:
-      "Hoobank is a modern website for a new generation of payment and transfer methods",
-    category: "web",
+    domain: "https://github.com/Saeed-Altout/devbook",
+    href: "https://devbook-sd.vercel.app",
+    shortDesc:
+      "Online book publishing platforms are ideal for helping authors publish",
+    description: [
+      `Online book publishing platforms are ideal for helping authors publish their work easily and effectively.  With the spread of the Internet and the decline in publishing and paper distribution costs, it has become possible for new and independent authors to reach a wide audience of potential readers around the world.`,
+      `Are you one of the dreamy authors? 
+      Do you have a book that you are unable to print and need to publish it? 😔`,
+      `We provide you with a #Devbook website through which you can publish your book, information about the book, and the most important points you aim to convey through your own book. Just contact us and enjoy your own website. 🤩`,
+    ],
     price: "free",
+    category: "web",
+    colors: ["#ec6523", "#f6f8fc", "#030303"],
+    favorite: true,
+
     moreDataProject: [
       {
-        id: 0,
-        tags: [
-          "Market",
-          "Business",
-          "Balance Transfer",
-          "Paypal",
-          "billing & invoicing",
-        ],
-        tools: ["NextJs", "Talwind Css", "Framer Motion"],
-        hours: 5,
-        design: "Js Mastry",
         coding: "Saeed Altout",
+        design: "Js Mastry",
+        hours: "2.5h",
+        tools: ["NextJs", "Talwind Css", "Framer Motion"],
         links: [
-          "https://github.com/Saeed-Altout/hoobank",
-          "https://hoobank-sd.vercel.app",
+          "https://github.com/Saeed-Altout/devBook",
+          "https://devbook-sd.vercel.app",
         ],
       },
     ],
-
-    colors: ["#000510", "#3dc3d5", "#93b4bc", "#aaf0f1"],
-    favorite: true,
   },
 ];
+
+export const knowleadg = [
+  {
+    title: "backend",
+    skills: [
+      {
+        icon: python,
+        title: "Python",
+        percentg: "40%",
+      },
+
+      {
+        icon: node,
+        title: "NodeJs",
+        percentg: "10%",
+      },
+    ],
+  },
+  {
+    title: "frontend",
+    skills: [
+      {
+        icon: html,
+        title: "Html",
+        percentg: "100%",
+      },
+      {
+        icon: css,
+        title: "Css",
+        percentg: "90%",
+      },
+      {
+        icon: javascript,
+        title: "Javascript",
+        percentg: "90%",
+      },
+      {
+        icon: typescript,
+        title: "Typescript",
+        percentg: "70%",
+      },
+      {
+        icon: sass,
+        title: "Sass",
+        percentg: "85%",
+      },
+      {
+        icon: react,
+        title: "ReactJs",
+        percentg: "95%",
+      },
+      {
+        icon: react,
+        title: "NextJs",
+        percentg: "80%",
+      },
+      {
+        icon: tailwind,
+        title: "Talwind Css",
+        percentg: "90%",
+      },
+    ],
+  },
+  {
+    title: "mobile",
+    skills: [
+      {
+        icon: react,
+        title: "React Native",
+        percentg: "30%",
+      },
+      {
+        icon: react,
+        title: "Expo",
+        percentg: "60%",
+      },
+    ],
+  },
+  {
+    title: "tools",
+    skills: [
+      {
+        icon: api,
+        title: "Api",
+        percentg: "40%",
+      },
+      {
+        icon: redux,
+        title: "Reducx",
+        percentg: "70%",
+      },
+      {
+        icon: tailwind,
+        title: "Framer Motion",
+        percentg: "50%",
+      },
+      {
+        icon: git,
+        title: "Git",
+        percentg: "80%",
+      },
+    ],
+  },
+  {
+    title: "Ux & UI",
+    skills: [
+      {
+        icon: figma,
+        title: "Xd",
+        percentg: "60%",
+      },
+      {
+        icon: figma,
+        title: "Figma",
+        percentg: "90%",
+      },
+    ],
+  },
+];
+
+export const offers = [];
 const countProjects = dataProjects.length;
 const countServices = services.length;
 const experiences = new Date().getFullYear() - 2019;
 const clientsHappy = 0;
+const skills = offers.length;
 export const states = [
   {
     id: 0,
@@ -284,6 +366,13 @@ export const states = [
     name: "Years Experience",
     state: `${experiences > 1 ? `+${experiences - 1}` : experiences}`,
     color: "#95ff83",
+    icon: <FaPlus />,
+  },
+  {
+    id: 4,
+    name: "Skills",
+    state: `${skills > 1 ? `+${skills - 1}` : skills}`,
+    color: "#4a69d8",
     icon: <FaPlus />,
   },
 ];
@@ -318,75 +407,6 @@ export const clientsComment = [
   
   `,
     img: client03,
-  },
-];
-
-export const offers = [
-  {
-    id: 0,
-    icon: react,
-    title: "ReactJs",
-    percentg: "95%",
-  },
-  {
-    id: 1,
-    icon: react,
-    title: "NextJs",
-    percentg: "80%",
-  },
-  {
-    id: 2,
-    icon: tailwind,
-    title: "Talwind Css",
-    percentg: "90%",
-  },
-  {
-    id: 3,
-    icon: tailwind,
-    title: "Framer Motion",
-    percentg: "50%",
-  },
-  {
-    id: 4,
-    icon: api,
-    title: "Api",
-    percentg: "40%",
-  },
-  {
-    id: 5,
-    icon: redux,
-    title: "Reducx",
-    percentg: "70%",
-  },
-  {
-    id: 6,
-    icon: figma,
-    title: "Xd",
-    percentg: "60%",
-  },
-  {
-    id: 7,
-    icon: figma,
-    title: "Figma",
-    percentg: "90%",
-  },
-  {
-    id: 8,
-    icon: react,
-    title: "React Native",
-    percentg: "30%",
-  },
-  {
-    id: 9,
-    icon: html,
-    title: "Html",
-    percentg: "100%",
-  },
-  {
-    id: 10,
-    icon: css,
-    title: "Css",
-    percentg: "90%",
   },
 ];
 
@@ -569,11 +589,4 @@ export const dataMe = [
   },
 ];
 
-export const colorsTheme = [
-  "#ccc",
-  "#ffb27a",
-  "#8bc7ff",
-  "#d083ff",
-  "#95ff83",
-  "#4a69d8",
-];
+export const colorsTheme = ["#ec6523", "#8bc7ff", "#d083ff", "#4a69d8"];

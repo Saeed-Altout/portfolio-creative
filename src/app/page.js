@@ -1,53 +1,53 @@
 "use client";
-import { Settings, Navbar } from "@/components";
+import { BlackLayer, Navbar, Settings } from "@/components";
+import { useStateContext } from "@/contexts/ContextProvider";
 import {
+  Clients,
   Contact,
   Footer,
-  Projects,
-  Services,
   Hero,
+  Projects,
   ProofState,
-  Clients,
+  Services,
   Skills,
 } from "@/layouts";
-import { useStateContext } from "@/contexts/ContextProvider";
+
 const Home = () => {
-  const { mode, setActiveMenu, setSettings, settings, activeMenu } =
-    useStateContext();
+  const { currentMode, setActiveMenu } = useStateContext();
+
   return (
     <div
       className={`${
-        mode == "dark" ? "dark" : "light"
-      } relative overflow-x-hidden w-full`}
+        currentMode === "dark" ? "dark" : "light"
+      } overflow-x-hidden relative`}
     >
+      <header>
+        <Navbar />
+      </header>
       <Settings />
-      <div className="relative bg-white dark:bg-darker">
-        <header>
-          <Navbar />
-        </header>
-        {settings && (
-          <div
-            className="absolute top-0 left-0 w-full h-full bg-[#0009] z-[500]"
-            onClick={() => {
-              setSettings(false);
-            }}
-          />
-        )}
-        <main
-          onClick={() => {
-            setActiveMenu(false);
-          }}
-        >
-          <Hero />
-          <Services />
-          <Projects />
-          <Skills />
-          <Clients />
-          <ProofState />
-          <Contact />
-        </main>
+      <BlackLayer />
+      <main
+        className="bg-white dark:bg-darker"
+        onClick={() => {
+          setActiveMenu(false);
+        }}
+      >
+        <Hero />
+        <Services />
+        <Projects />
+        <Skills />
+        <ProofState />
+        <Clients />
+        <Contact />
+      </main>
+      <footer
+        className="bg-white dark:bg-darker"
+        onClick={() => {
+          setActiveMenu(false);
+        }}
+      >
         <Footer />
-      </div>
+      </footer>
     </div>
   );
 };

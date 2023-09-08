@@ -10,7 +10,7 @@ const Logo = () => {
       style={{
         backgroundColor: currentTheme,
       }}
-      className={`${flex.center} w-8 h-8 text-xl font-bold text-white dark:text-darker rounded-full`}
+      className={`${flex.center} w-8 h-8 text-xl font-bold text-white rounded-full`}
       onClick={() => {
         window.scrollTo(0, 0);
       }}

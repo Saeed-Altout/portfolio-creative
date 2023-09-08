@@ -8,7 +8,7 @@ const tag = {
   section: "py-40 w-full h-full relative",
   container: "px-6 container mx-auto",
   button: "text-base font-medium py-3 px-12 rounded-full",
-  a: "text-lg font-normal text-black capitalize duration-300 ease-in-out dark:text-white ",
+  a: "text-base font-normal text-black capitalize duration-300 ease-in-out dark:text-white ",
 };
 const text = {
   p: "text-black font-normal tracking-wider text-base leading-8 dark:text-white",

@@ -3,7 +3,7 @@ import { colorsTheme } from "@/constants";
 import { useStateContext } from "@/contexts/ContextProvider";
 import { FaMoon, FaSun } from "react-icons/fa";
 const Settings = () => {
-  const { settings, setSettings, setCurrentTheme, setMode } = useStateContext();
+  const { settings, setSettings, setTheme, setMode } = useStateContext();
   return (
     <>
       {settings && (
@@ -18,7 +18,7 @@ const Settings = () => {
                   backgroundColor: color,
                 }}
                 onClick={() => {
-                  setCurrentTheme(color);
+                  setTheme(color);
                   setSettings(false);
                 }}
               />

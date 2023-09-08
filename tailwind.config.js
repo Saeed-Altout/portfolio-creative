@@ -23,6 +23,7 @@ module.exports = {
       },
       fontFamily: {
         poppins: "poppins",
+        cairo: "Cairo",
       },
       backgroundImage: {
         "hero-pattern-right": "url('./src/assets/images/banner-right')",
