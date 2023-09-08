@@ -2,6 +2,10 @@ import react from "../assets/images/skills/react.png";
 import api from "../assets/images/skills/api.png";
 import vercel from "../assets/images/skills/vercel.svg";
 import css from "../assets/images/skills/css.png";
+import xd from "../assets/images/skills/xd.png";
+import framer from "../assets/images/skills/framer.png";
+import nextjs from "../assets/images/skills/nextjs.jpg";
+import expo from "../assets/images/skills/expo.jpg";
 import figma from "../assets/images/skills/figma.png";
 import tailwind from "../assets/images/skills/tailwind.png";
 import git from "../assets/images/skills/git.png";
@@ -265,7 +269,7 @@ export const knowleadg = [
         percentg: "95%",
       },
       {
-        icon: react,
+        icon: nextjs,
         title: "NextJs",
         percentg: "80%",
       },
@@ -285,7 +289,7 @@ export const knowleadg = [
         percentg: "30%",
       },
       {
-        icon: react,
+        icon: expo,
         title: "Expo",
         percentg: "60%",
       },
@@ -305,7 +309,7 @@ export const knowleadg = [
         percentg: "70%",
       },
       {
-        icon: tailwind,
+        icon: framer,
         title: "Framer Motion",
         percentg: "50%",
       },
@@ -320,7 +324,7 @@ export const knowleadg = [
     title: "Ux & UI",
     skills: [
       {
-        icon: figma,
+        icon: xd,
         title: "Xd",
         percentg: "60%",
       },

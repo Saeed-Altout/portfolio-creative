@@ -15,14 +15,14 @@ const Toggle = () => {
     >
       {activeMenu ? (
         <FiX
-          className="text-3xl"
+          className="text-3xl text-black dark:text-white"
           style={{
             color: currentTheme,
           }}
         />
       ) : (
         <FiMenu
-          className="text-3xl"
+          className="text-3xl text-black dark:text-white"
           style={{
             color: currentTheme,
           }}
