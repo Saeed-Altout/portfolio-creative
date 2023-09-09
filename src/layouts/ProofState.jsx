@@ -5,7 +5,7 @@ const ProofState = () => {
   return (
     <section className={tag.section}>
       <Container>
-        <div className={`${flex.center} flex-col gap-10 md:flex-row`}>
+        <div className={`${flex.center} flex-col gap-10 lg:flex-row`}>
           {states.map((state) => (
             <div key={state.id} className={`${flex.center} gap-2`}>
               <h1
