@@ -27,9 +27,6 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // template_y7cmfug
-    // service_iekjdtw
-    // ZoU7F7pOMJtRx8-ji
     emailjs
       .send(
         "service_iekjdtw",
@@ -107,7 +104,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
-              className="w-full px-5 py-3 duration-300 ease-in-out rounded-lg outline-none dark:bg-dark bg-gray-50 placeholder:text-black dark:placeholder:text-white"
+              className="w-full px-5 py-3 duration-300 ease-in-out rounded-lg outline-none dark:text-white dark:bg-dark bg-gray-50 placeholder:text-black dark:placeholder:text-white"
             />
 
             <button
