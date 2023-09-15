@@ -1,63 +1,52 @@
 "use client";
-import {
-  Button,
-  Container,
-  Navbar,
-  TitleSection,
-  Settings,
-  AreaProjects,
-  BlackLayer,
-  Categories,
-} from "@/components";
-import { Footer } from "@/layouts";
-import { tag } from "@/app/style";
+import { Button, AreaProjects } from "@/components";
+import { Footer, Navbar } from "@/layouts";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useStateContext } from "@/contexts/ContextProvider";
 const ProjectPage = () => {
-  const { setActiveMenu, currentMode, category } = useStateContext();
+  const { setActiveMenu } = useStateContext();
   return (
-    <div
-      className={`${
-        currentMode === "dark" ? "dark" : "light"
-      } overflow-x-hidden relative`}
-    >
+    <>
       <header>
         <Navbar />
       </header>
-      <Settings />
-      <BlackLayer />
       <main
-        className="bg-white dark:bg-darker"
         onClick={() => {
           setActiveMenu(false);
         }}
       >
-        <section className={tag.section}>
-          <Container>
-            <TitleSection
-              title="All projects"
-              subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod."
-            />
-            <Categories />
-            <AreaProjects category={category} />
+        <section>
+          {/* Title Section */}
+          <div className="container">
+            <div className="max-w-4xl text-center lg:text-left">
+              <h2 className="text-4xl font-bold capitalize text-primary md:text-5xl">
+                All projects
+              </h2>
+              <p>
+                You are free to use this template for any purpose. You are not
+                allowed to redistribute the downloadable ZIP file of Tale SEO
+                Template on any other template website. Please contact us. Thank
+                you.
+              </p>
+            </div>
+            <AreaProjects category={"all"} />
             <Button
               href="/#projects"
               text="Go Back Home"
               icon={<FiArrowUpRight />}
-              styles={`mt-20 mx-auto bg-black text-white`}
+              styles="mt-20 mx-auto"
             />
-          </Container>
+          </div>
         </section>
       </main>
       <footer
-        className="bg-white dark:bg-darker"
         onClick={() => {
           setActiveMenu(false);
         }}
       >
         <Footer />
       </footer>
-    </div>
+    </>
   );
 };
 

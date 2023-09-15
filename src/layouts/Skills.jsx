@@ -1,33 +1,28 @@
-import Image from "next/image";
-import { flex, tag } from "@/app/style";
-import { skills } from "@/assets/images";
-import { AreaProgress, Container, TitleSection } from "@/components";
+import { AreaProgress } from "@/components";
 
 const Skills = () => {
   return (
-    <section className={tag.section} id="skills">
-      <Container>
-        <TitleSection
-          title="What We Have Skills"
-          subTitle="You are free to use this template for any purpose. You are not
-        allowed to redistribute the downloadable ZIP file of Tale SEO
-        Template on any other template website. Please contact us. Thank
-        you."
-        />
+    <section id="skills">
+      <div className="container">
+        {/* Title Section */}
 
-        <div
-          className={`${flex.center} flex-col w-full gap-20 mt-20 lg:flex-row`}
-        >
-          <AreaProgress />
-          <div className="hidden max-w-xl -order-1 lg:order-1">
-            <Image
-              alt="Skills"
-              src={skills}
-              className="object-contain w-full h-full"
-            />
-          </div>
+        <div className="max-w-4xl text-center lg:text-left">
+          <h2 className="text-4xl font-bold capitalize text-primary md:text-5xl">
+            What We Have Skills
+          </h2>
+          <p>
+            With in-depth experience in currentModern web technologies and
+            development tools, I always strive to deliver the highest levels of
+            performance and quality in every project I participate in. I have
+            strong skills in... Html5, Css3, JavaScript, Typescript, Boostrap5,
+            Tailwind Css, ReactJS, NextJS, Api, Redux, Framer Motion and more...
+          </p>
         </div>
-      </Container>
+
+        {/* Area Progress */}
+
+        <AreaProgress />
+      </div>
     </section>
   );
 };

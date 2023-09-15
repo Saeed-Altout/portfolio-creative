@@ -1,24 +1,24 @@
-import react from "../assets/images/skills/react.png";
-import api from "../assets/images/skills/api.png";
-import vercel from "../assets/images/skills/vercel.svg";
-import css from "../assets/images/skills/css.png";
-import xd from "../assets/images/skills/xd.png";
-import framer from "../assets/images/skills/framer.png";
-import nextjs from "../assets/images/skills/nextjs.jpg";
-import expo from "../assets/images/skills/expo.jpg";
-import figma from "../assets/images/skills/figma.png";
-import tailwind from "../assets/images/skills/tailwind.png";
-import git from "../assets/images/skills/git.png";
-import html from "../assets/images/skills/html.png";
-import javascript from "../assets/images/skills/javascript.png";
-import node from "../assets/images/skills/node.png";
-import python from "../assets/images/skills/python.png";
-import redux from "../assets/images/skills/redux.png";
-import sass from "../assets/images/skills/sass.png";
-import typescript from "../assets/images/skills/typescript.png";
+import react from "../../public/images/skills/react.png";
+import api from "../../public/images/skills/api.png";
+import css from "../../public/images/skills/css.png";
+import xd from "../../public/images/skills/xd.png";
+import framer from "../../public/images/skills/framer.png";
+import nextjs from "../../public/images/skills/nextjs.jpg";
+import expo from "../../public/images/skills/expo.jpg";
+import figma from "../../public/images/skills/figma.png";
+import tailwind from "../../public/images/skills/tailwind.png";
+import git from "../../public/images/skills/git.png";
+import html from "../../public/images/skills/html.png";
+import javascript from "../../public/images/skills/javascript.png";
+import node from "../../public/images/skills/node.png";
+import python from "../../public/images/skills/python.png";
+import redux from "../../public/images/skills/redux.png";
+import sass from "../../public/images/skills/sass.png";
+import php from "../../public/images/skills/php.png";
+import laravel from "../../public/images/skills/laravel.png";
+import typescript from "../../public/images/skills/typescript.png";
+
 import {
-  FaCity,
-  FaPhone,
   FaEnvelope,
   FaInstagram,
   FaFacebook,
@@ -30,51 +30,40 @@ import {
   FaLocationArrow,
   FaUniversity,
   FaCalendar,
-  FaTextWidth,
-  FaLine,
-  FaGenderless,
   FaUser,
   FaHome,
-  FaTools,
-  FaLinkedinIn,
   FaLinkedin,
   FaTelegram,
 } from "react-icons/fa";
-import { FaFolder, FaHeadphones, FaPlus, FaUsers } from "react-icons/fa";
-import {
-  hoobank,
-  portfolio_3D,
-  seo,
-  devbook,
-  portfolio,
-} from "../assets/images/projects/index";
 
-import service1 from "../assets/images/service/services-icon-1.svg";
-import service2 from "../assets/images/service/services-icon-2.svg";
-import service3 from "../assets/images/service/services-icon-3.svg";
-import service4 from "../assets/images/service/services-icon-4.svg";
-import service5 from "../assets/images/service/services-icon-5.svg";
-import service6 from "../assets/images/service/services-icon-6.svg";
-import service7 from "../assets/images/service/services-icon-7.svg";
-import service8 from "../assets/images/service/services-icon-8.svg";
-import { client01, client02, client03 } from "@/assets/images/clients";
-import { FiFileText, FiSettings } from "react-icons/fi";
+import { FaFolder, FaHeadphones, FaPlus, FaUsers } from "react-icons/fa";
+
+import hoobank from "../../public/images/projects/hoobank.png";
+import devbook from "../../public/images/projects/devbook.png";
+
+import service1 from "../../public/images/service/services-icon-1.svg";
+import service2 from "../../public/images/service/services-icon-2.svg";
+import service3 from "../../public/images/service/services-icon-3.svg";
+import service4 from "../../public/images/service/services-icon-4.svg";
+import service5 from "../../public/images/service/services-icon-5.svg";
+import service6 from "../../public/images/service/services-icon-6.svg";
+
+import client01 from "../../public/images/clients/client01.jpg";
+import client02 from "../../public/images/clients/client02.jpg";
+import client03 from "../../public/images/clients/client03.jpg";
 
 export const navLinks = [
   {
     name: "home",
     href: "/",
-    icon: <FaHome />,
   },
   {
     name: "about",
     href: "/about",
-    icon: <FaUser />,
   },
   {
     name: "services",
     href: "/#services",
-    icon: <FaHeadphones />,
   },
   {
     name: "projects",
@@ -82,16 +71,10 @@ export const navLinks = [
     icon: <FaFolder />,
   },
   {
-    name: "skills",
-    href: "/#skills",
-    icon: <FaTools />,
-  },
-  {
     name: "clients",
     href: "/#clients",
-    icon: <FaUsers />,
+    icon: <FaFolder />,
   },
-
   {
     name: "contact",
     href: "/#contact",
@@ -104,54 +87,36 @@ export const services = [
     icon: service1,
     color: "#ffb27a",
     title: "UX, UI Design",
-    descr: `Strategy formulation is built. consectetur adipiscing elit`,
   },
   {
     icon: service2,
     color: "#8bc7ff",
     title: "Web Design",
-    descr: `Strategy formulation is built. consectetur adipiscing elit`,
   },
   {
     icon: service3,
     color: "#d083ff",
-    title: "UX Research",
-    descr: `Strategy formulation is built. consectetur adipiscing elit`,
+    title: "Mobile Modern",
   },
 
   {
     icon: service4,
     color: "#ffb27a",
     title: "Security",
-    descr: `Strategy formulation is built. consectetur adipiscing elit`,
   },
   {
     icon: service5,
     color: "#8bc7ff",
-    title: "Mobile Modern",
-    descr: `Strategy formulation is built. consectetur adipiscing elit`,
+    title: "Api",
   },
   {
     icon: service6,
-    color: "#ffb27a",
-    title: "Team Friendly",
-    descr: `Strategy formulation is built. consectetur adipiscing elit`,
-  },
-  {
-    icon: service7,
     color: "#d083ff",
     title: "Code Clean",
-    descr: `Strategy formulation is built. consectetur adipiscing elit`,
-  },
-  {
-    icon: service8,
-    color: "#4a69d8",
-    title: "Fast Responsev",
-    descr: `Strategy formulation is built. consectetur adipiscing elit`,
   },
 ];
 
-export const dataProjects = [
+export const projects = [
   {
     img: hoobank,
     title: "hoobank",
@@ -232,6 +197,16 @@ export const knowleadg = [
         icon: node,
         title: "NodeJs",
         percentg: "10%",
+      },
+      {
+        icon: php,
+        title: "Php",
+        percentg: "70%",
+      },
+      {
+        icon: laravel,
+        title: "Laravel",
+        percentg: "60%",
       },
     ],
   },
@@ -338,7 +313,7 @@ export const knowleadg = [
 ];
 
 export const offers = [];
-const countProjects = dataProjects.length;
+const countProjects = projects.length;
 const countServices = services.length;
 const experiences = new Date().getFullYear() - 2019;
 const clientsHappy = 0;
@@ -385,10 +360,10 @@ export const clientsComment = [
   {
     id: 0,
     comment: `Lorem Ipsum is simply dummy text of the printing and typesetting
-  industry. Lorem Ipsum has been the industry's standard dummy
-  text ever since the 1500s, when an unknown printer took a galley
-  of type and scrambled it to make a type specimen book. It has
-  survived not only five`,
+    industry. Lorem Ipsum has been the industry's standard dummy
+    text ever since the 1500s, when an unknown printer took a galley
+    of type and scrambled it to make a type specimen book. It has
+    survived not only five`,
     img: client01,
   },
   {
@@ -398,7 +373,7 @@ export const clientsComment = [
     injected humour, or randomised words which don't look even
     slightly believable. If you are going to use a passage of Lorem
     Ipsum, you need to be sure there
-  `,
+    `,
     img: client02,
   },
   {
@@ -408,8 +383,8 @@ export const clientsComment = [
     incididunt ut labore et dolore magna aliqua.Contrary to popular
     belief, Lorem Ipsum is not simply random text. It has roots in a
     piece of classical Latin literature.
-  
-  `,
+    
+    `,
     img: client03,
   },
 ];

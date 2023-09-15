@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#4e98e5",
+        primary: "#d083ff",
+        hoverPrimary: "#d060f0",
         graySd: "#404152",
         darker: "#121212",
         dark: "#1D1D1F",

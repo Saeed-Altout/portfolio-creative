@@ -1,42 +1,46 @@
 import Image from "next/image";
 import { services } from "@/constants";
-import { flex, tag, text } from "@/app/style";
-import { Container, Grid, TitleSection } from "@/components";
 const Services = () => {
   return (
-    <section className={tag.section} id="services">
-      <Container>
-        <TitleSection
-          title="Provide Services"
-          subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod."
-        />
+    <section id="services">
+      <div className="container">
+        {/* Title Section */}
 
-        <Grid>
+        <div className="text-center lg:text-left">
+          <h2 className="text-4xl font-bold capitalize text-primary md:text-5xl">
+            Provide Services
+          </h2>
+          <p>
+            Transforming ideas into Powerfull Solution: Our Expert Development
+            Services.
+          </p>
+        </div>
+
+        {/* Grid Services */}
+
+        <div className="grid grid-flow-row grid-cols-1 gap-10 mt-20 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {services.map((service, key) => (
             <div
               key={key}
-              className={`${flex.center} flex-col gap-2 sm:max-w-md p-10 text-center duration-300 ease-in-out bg-white dark:bg-dark border-2 rounded-lg border-gray-50 hover:border-gray-100 dark:border-darker dark:hover:border-dark`}
+              className="flex flex-col items-center justify-center gap-3 py-10 text-center rounded-lg shadow-lg"
             >
-              <div className="mb-5 h-18 w-18">
-                <Image
-                  src={service.icon}
-                  alt="Icon Services"
-                  className="object-contain w-full h-full "
-                />
-              </div>
+              <Image
+                src={service.icon}
+                alt="Icon Service"
+                className="w-16 h-16 transition cursor-pointer hover:scale-110"
+              />
               <h2
-                className={text.h2}
+                className="text-2xl font-medium"
                 style={{
                   color: service.color,
                 }}
               >
                 {service.title}
               </h2>
-              <p className={text.p}>{service.descr}</p>
             </div>
           ))}
-        </Grid>
-      </Container>
+        </div>
+      </div>
     </section>
   );
 };

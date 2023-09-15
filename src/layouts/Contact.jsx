@@ -1,14 +1,8 @@
 "use client";
-import { tag } from "@/app/style";
-import { contact } from "@/assets/images";
-import { Container, TitleSection } from "@/components";
-import { useStateContext } from "@/contexts/ContextProvider";
-import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import Input from "@/components/Input";
 const Contact = () => {
-  const { currentTheme } = useStateContext();
-
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -60,42 +54,43 @@ const Contact = () => {
   };
 
   return (
-    <section className={tag.section} id="contact">
-      <Container>
-        <TitleSection
-          styles="text-center md:text-left"
-          title="Contact Us & Get In Touch"
-          subTitle="You are free to use this template for any purpose. You are not allowed to redistribute the downloadable ZIP file of Tale SEO Template on any other template website. Please contact us. Thank you."
-        />
+    <section id="contact">
+      <div className="container">
+        {/* Title Section */}
+
+        <div className="max-w-4xl text-center lg:text-left">
+          <h2 className="text-4xl font-bold capitalize text-primary md:text-5xl">
+            Contact Us & Get In Touch
+          </h2>
+          <p>
+            Thank you for looking at my website 💗, and I hope you are happy
+            with it. If you like our work, please do not hesitate to contact us
+            and request, and we promise that we will respond as soon as
+            possible.
+          </p>
+        </div>
+
         <div className="flex flex-col items-center justify-center w-full gap-20 mt-20 lg:flex-row ">
-          <div className="max-w-xl -order-1 lg:order-1">
-            <Image
-              alt="Contact Us"
-              src={contact}
-              className="object-contain w-full h-full"
-            />
-          </div>
+          <img alt="Contact Us" src="contact.png" className="max-w-md" />
+
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="flex flex-col w-full max-w-4xl gap-12 p-5 mt-20 duration-300 ease-in-out shadow-lg rounded-xl md:p-10 md:order-1"
+            className="flex flex-col w-full max-w-4xl gap-10 p-5 transition bg-white shadow-lg "
           >
-            <input
+            <Input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your name?"
-              className="w-full px-5 py-3 duration-300 ease-in-out rounded-lg outline-none dark:bg-dark bg-gray-50 placeholder:text-black dark:placeholder:text-white"
+              label="Name"
             />
-
-            <input
-              type="email"
+            <Input
+              type="text"
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="what's your email?"
-              className="w-full px-5 py-3 duration-300 ease-in-out rounded-lg outline-none dark:bg-dark bg-gray-50 placeholder:text-black dark:placeholder:text-white"
+              label="E-mail"
             />
 
             <textarea
@@ -104,21 +99,18 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
-              className="w-full px-5 py-3 duration-300 ease-in-out rounded-lg outline-none dark:text-white dark:bg-dark bg-gray-50 placeholder:text-black dark:placeholder:text-white"
+              className="block w-full px-6 pt-6 pb-1 text-black rounded-md appearance-none bg-purple-50 text-md focus:outline-none focus:ring-0 peer invalid:border-b-1"
             />
 
             <button
               type="submit"
-              className={`text-base hover:bg-opacity-90 w-full py-3 rounded-lg outline-none duration-300 ease-in-out cursor-pointer text-white font-medium`}
-              style={{
-                backgroundColor: currentTheme,
-              }}
+              className="px-6 py-3 ml-auto text-base font-medium text-white transition rounded-lg outline-none cursor-pointer w-fit hover:bg-hoverPrimary bg-primary"
             >
               {loading ? "Sending..." : "Send"}
             </button>
           </form>
         </div>
-      </Container>
+      </div>
     </section>
   );
 };

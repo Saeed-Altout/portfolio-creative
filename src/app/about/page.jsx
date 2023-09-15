@@ -1,84 +1,63 @@
 "use client";
-import { BlackLayer, Navbar, Settings } from "@/components";
-import { AreaProgress, Button, Container } from "@/components";
-import { useStateContext } from "@/contexts/ContextProvider";
-import { profile } from "@/assets/images";
-import { flex, text } from "@/app/style";
-import { dataMe } from "@/constants";
-import { FiArrowUpRight } from "react-icons/fi";
 import Image from "next/image";
-import { Footer } from "@/layouts";
+import { FiArrowUpRight } from "react-icons/fi";
+import { knowleadg, dataMe } from "@/constants";
+import { Footer, Navbar } from "@/layouts";
+import { Button } from "@/components";
+import { useStateContext } from "@/contexts/ContextProvider";
 
 const About = () => {
-  const { currentMode, setActiveMenu, currentTheme } = useStateContext();
+  const { setActiveMenu } = useStateContext();
 
   return (
-    <div
-      className={`${
-        currentMode === "dark" ? "dark" : "light"
-      } overflow-x-hidden relative`}
-    >
+    <>
       <header>
         <Navbar />
       </header>
-      <Settings />
-      <BlackLayer />
       <main
-        className="bg-white dark:bg-darker"
         onClick={() => {
           setActiveMenu(false);
         }}
       >
-        <section className="relative py-40">
-          <Container styles={`${flex.start} gap-10 flex-col`}>
-            <div
-              className={`${flex.start} flex-col w-full gap-10 duration-300 ease-in-out lg:flex-row`}
-            >
+        <section>
+          <div className="container">
+            <div className="flex flex-col items-start justify-start w-full gap-10 lg:flex-row">
               {/* Image and Title */}
-              <div className={`${flex.start} flex-col gap-4`}>
-                <div className="w-full overflow-hidden rounded-lg md:max-w-sm">
-                  <Image
-                    src={profile}
-                    alt="Image Developer"
-                    className="object-cover w-full h-full"
-                  />
-                </div>
+              <div className="flex flex-col items-start justify-start gap-4">
+                <img
+                  src="profile.jpg"
+                  alt="Image Developer"
+                  className="rounded-xl md:max-w-sm"
+                />
 
-                <h2 className={text.h2} style={{ color: currentTheme }}>
+                <h1 className="text-3xl font-medium text-primary">
                   Saeed Altout
-                  <span className={`${text.p} block text-left`}>
+                  <span className="block text-base font-normal leading-8 text-left text-black">
                     @saeedaltoutpro
                   </span>
-                </h2>
+                </h1>
               </div>
 
               {/* Infos */}
-              <div className={`${flex.start} flex-col gap-4`}>
+              <div className="flex flex-col items-start justify-start gap-4">
                 {dataMe.map((item, key) => (
                   <p
                     key={key}
-                    className={`${flex.center} gap-2 text-base font-medium text-black dark:text-white`}
+                    className="flex items-center justify-start gap-2"
                   >
-                    <span className={text.p}>{item.icon}</span>
-                    {item.title}: <span>{item.text}</span>
+                    <span>{item.icon}</span>
+                    <span className="font-medium text-black">
+                      {item.title}:
+                    </span>
+                    <span>{item.text}</span>
                   </p>
                 ))}
               </div>
             </div>
 
             <div className="w-full mt-10 text-left">
-              <h2 className={text.h2} style={{ color: currentTheme }}>
-                About me
-              </h2>
-              <p className={`${text.p} py-2 text-justify leading-10`}>
-                <span
-                  className="block py-2 text-2xl"
-                  style={{
-                    color: currentTheme,
-                  }}
-                >
-                  English:
-                </span>
+              <h2 className="text-3xl font-medium text-primary">About me:</h2>
+              <p>
                 An enthusiastic and creative professional web developer, I have
                 the ability to create and develop effective and attractive web
                 applications. With in-depth experience in currentModern web
@@ -107,61 +86,59 @@ const About = () => {
                 positive impact and deliver exceptional user experiences on the
                 web.
               </p>
-              <p
-                className={`${text.p} font-cairo py-2 text-justify leading-10`}
-                lang="ar"
-                dir="rtl"
-              >
-                <span
-                  className="block py-2 text-2xl"
-                  style={{
-                    color: currentTheme,
-                  }}
-                >
-                  عربي:
-                </span>
-                مطور ويب محترف متحمس ومبدع، لدي القدرة على إنشاء وتطوير تطبيقات
-                الويب الفعّالة والجذابة. مع خبرة متعمقة في تقنيات الويب الحديثة
-                وأدوات التطوير، أسعى دومًا لتقديم أعلى مستويات الأداء والجودة في
-                كل مشروع أشارك فيه. أتمتع بمهارات قوية في Html5 , Css3
-                ,JavaScript, Typescript, Boostrap5 , Tailwind Css, ReactJS,
-                NextJS, Api, Redux, Framer Motion and more... وأنا ملم بمعايير
-                وأفضل الممارسات في مجال تصميم وتطوير تجارب المستخدم في مواقع
-                الويب. بفضل معرفتي الواسعة بتقنيات الاستجابة وتصميم واجهة
-                المستخدم السلسة، أستطيع تحويل الأفكار والمتطلبات إلى تجارب
-                مُستخدم خلاّبة ومناسبة لجميع الأجهزة. أتميز بقدرتي على العمل
-                كجزء من فريق وأيضًا بشكل مستقل، حيث يمكنني هضم المشاريع المعقدة
-                وتنفيذها بكفاءة وفعالية. أنا متحمس للتعلم المستمر ومتابعة
-                التطورات التكنولوجية الحديثة، حيث أسعى إلى تقنين مهاراتي وتوسيع
-                معرفتي للبقاء على اطلاع دائم على آخر اتجاهات تطوير الويب. أبحث
-                عن فرص تحدي ومشاريع جديدة للعمل عليها، حيث يمكنني تقديم الابتكار
-                والحلول المبتكرة لتلبية احتياجات العملاء. إذا كنت تبحث عن مطور
-                ويب محترف يمتلك المعرفة والمهارات اللازمة لتحويل رؤيتك إلى واقع
-                ملموس، فأنا هنا للمساعدة. لا تتردد في الاتصال بي لمناقشة فرص
-                العمل أو المشاريع المحتملة. أتطلع إلى التعاون معكم لإحداث تأثير
-                إيجابي وتقديم تجارب استثنائية للمستخدم على الويب.
-              </p>
-              <AreaProgress />
+
+              <div className="flex flex-col items-start justify-start w-full gap-12 p-5 mt-20 bg-white xl:flex-row">
+                {knowleadg.map((group, key) => (
+                  <div key={key} className="flex flex-col w-full gap-5">
+                    <h2 className="text-2xl font-medium capitalize">
+                      {group.title}
+                    </h2>
+                    {group.skills.map((skill, key) => (
+                      <div key={key} className="flex flex-col w-full gap-3">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center justify-center gap-2">
+                            <Image
+                              alt="Icon Skill"
+                              src={skill.icon}
+                              width={40}
+                            />
+                            <p>{skill.title}</p>
+                          </div>
+                          <p>{skill.percentg}</p>
+                        </div>
+
+                        <span className="block w-full h-2 overflow-hidden bg-gray-200 rounded-xl">
+                          <span
+                            style={{
+                              width: skill.percentg,
+                            }}
+                            className="relative bg-gradient-to-r from-[#fed7fb] to-primary h-2 block"
+                          />
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
 
             <Button
               href="/#skills"
               text="Go Back Home"
               icon={<FiArrowUpRight />}
-              styles={`mt-36 mx-auto bg-black text-white`}
+              styles="mt-36 mx-auto"
             />
-          </Container>
+          </div>
         </section>
       </main>
       <footer
-        className="bg-white dark:bg-darker"
         onClick={() => {
           setActiveMenu(false);
         }}
       >
         <Footer />
       </footer>
-    </div>
+    </>
   );
 };
 
