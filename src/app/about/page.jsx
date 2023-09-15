@@ -112,7 +112,7 @@ const About = () => {
                             style={{
                               width: skill.percentg,
                             }}
-                            className="relative bg-gradient-to-r from-[#fed7fb] to-primary h-2 block"
+                            className="relative bg-gradient-to-r from-[#fff] to-sky-500 h-2 block"
                           />
                         </span>
                       </div>

@@ -9,7 +9,7 @@ const Input = ({ id, onChange, value, label, type, name }) => {
         type={type}
         name={name}
         id={id}
-        className="block w-full px-6 pt-6 pb-1 text-black rounded-md appearance-none bg-purple-50 text-md focus:outline-none focus:ring-0 peer invalid:border-b-1"
+        className="block w-full px-6 pt-6 pb-1 text-black rounded-md appearance-none bg-gray-50 text-md focus:outline-none focus:ring-0 peer invalid:border-b-1"
         placeholder=" "
       />
       <label

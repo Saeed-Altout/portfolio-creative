@@ -99,7 +99,7 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
-              className="block w-full px-6 pt-6 pb-1 text-black rounded-md appearance-none bg-purple-50 text-md focus:outline-none focus:ring-0 peer invalid:border-b-1"
+              className="block w-full px-6 pt-6 pb-1 text-black rounded-md appearance-none bg-gray-50 text-md focus:outline-none focus:ring-0 peer invalid:border-b-1"
             />
 
             <button
