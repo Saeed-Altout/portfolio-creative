@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ContextProvider>
-        <body>{children}</body>
+        <body className="w-full overflow-x-hidden bg-white">{children}</body>
       </ContextProvider>
     </html>
   );

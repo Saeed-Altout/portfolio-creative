@@ -23,6 +23,7 @@ const Home = () => {
         onClick={() => {
           setActiveMenu(false);
         }}
+        className="overflow-x-hidden"
       >
         <Hero />
         <Services />

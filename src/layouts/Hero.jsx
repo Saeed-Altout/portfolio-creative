@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import ProofState from "../components/ProofState";
 const Hero = () => {
   return (
     <section>
@@ -31,8 +30,6 @@ const Hero = () => {
         />
       </div>
 
-      {/* Proof State */}
-      <ProofState />
       <div className="absolute flex items-center justify-center w-full bottom-10">
         <Link href={"#services"}>
           <div className="flex items-center justify-center w-10 h-16 p-2 border-2 border-black rounded-full">

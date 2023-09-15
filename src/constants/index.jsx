@@ -313,48 +313,6 @@ export const knowleadg = [
 ];
 
 export const offers = [];
-const countProjects = projects.length;
-const countServices = services.length;
-const experiences = new Date().getFullYear() - 2019;
-const clientsHappy = 0;
-const skills = offers.length;
-export const states = [
-  {
-    id: 0,
-    name: "Happy Clients",
-    state: `${clientsHappy > 1 ? `+${clientsHappy - 1}` : `${clientsHappy}_0`}`,
-    color: "#ffb27a",
-    icon: <FaUsers />,
-  },
-  {
-    id: 1,
-    name: "Projects Complated",
-    state: `${countProjects > 1 ? `+${countProjects - 1}` : countProjects}`,
-    color: "#8bc7ff",
-    icon: <FaFolder />,
-  },
-  {
-    id: 2,
-    name: "Services",
-    state: `${countServices > 1 ? `+${countServices - 1}` : countServices}`,
-    color: "#d083ff",
-    icon: <FaHeadphones />,
-  },
-  {
-    id: 3,
-    name: "Years Experience",
-    state: `${experiences > 1 ? `+${experiences - 1}` : experiences}`,
-    color: "#95ff83",
-    icon: <FaPlus />,
-  },
-  {
-    id: 4,
-    name: "Skills",
-    state: `${skills > 1 ? `+${skills - 1}` : skills}`,
-    color: "#4a69d8",
-    icon: <FaPlus />,
-  },
-];
 
 export const clientsComment = [
   {
