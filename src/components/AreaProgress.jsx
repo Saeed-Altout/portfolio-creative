@@ -22,7 +22,7 @@ const AreaProgress = () => {
                   style={{
                     width: skill.percentg,
                   }}
-                  className="relative bg-gradient-to-r from-[#fed7fb] to-primary h-2 block"
+                  className="relative block h-2 bg-gradient-to-r from-[#fff] to-sky-500"
                 />
               </span>
             </div>

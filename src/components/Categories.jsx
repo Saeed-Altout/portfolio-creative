@@ -10,7 +10,7 @@ const Categories = () => {
           className={`px-6 py-2 rounded-lg text-black capitalize transition block w-fit`}
           onClick={() => setCategory(catego)}
           style={{
-            backgroundColor: catego == category && "#d083ff",
+            backgroundColor: catego == category && "#000",
             color: catego == category && "#fff",
           }}
         >

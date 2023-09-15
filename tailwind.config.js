@@ -10,24 +10,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#d083ff",
-        hoverPrimary: "#d060f0",
-        graySd: "#404152",
-        darker: "#121212",
-        dark: "#1D1D1F",
-        darkestSd: "#070c13",
-        blueLightSd: "#e9ecef",
-        whiteLightSd: "#dfdfdf",
-        oneLightSd: "#ffefb5",
-        towLightSd: "#5960ff",
-        towLightSd: "#e6f1ff",
+        primary: "#000",
+        hoverPrimary: "#000c",
       },
       fontFamily: {
         poppins: "poppins",
-        cairo: "Cairo",
-      },
-      backgroundImage: {
-        "hero-pattern-right": "url('./src/assets/images/banner-right')",
       },
     },
   },
